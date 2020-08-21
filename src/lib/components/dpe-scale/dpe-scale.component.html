@@ -1,0 +1,98 @@
+<span class="scale-text">Logement économe</span>
+
+<div class="scale" [class.selectable]="selectable">
+  <input type="radio" id="dpe-field-A" name="dpe" [value]="DPEEnum.A" [disabled]="!selectable" [(ngModel)]="value"
+         (ngModelChange)="radioChanged($event)">
+  <label for="dpe-field-A">
+    <div class="arrow">
+      <span class="value">≤ 50</span>
+      <span class="note">{{ DPEEnum.A }}</span>
+    </div>
+    <div class="spacer"></div>
+    <div class="selected">
+      <span class="note">{{ DPEEnum.A }}</span>
+    </div>
+  </label>
+
+  <input type="radio" id="dpe-field-B" name="dpe" [value]="DPEEnum.B" [disabled]="!selectable" [(ngModel)]="value"
+         (ngModelChange)="radioChanged($event)">
+  <label for="dpe-field-B">
+    <div class="arrow">
+      <span class="value">51 à 90</span>
+      <span class="note">{{ DPEEnum.B }}</span>
+    </div>
+    <div class="spacer"></div>
+    <div class="selected">
+      <span class="note">{{ DPEEnum.B }}</span>
+    </div>
+  </label>
+
+  <input type="radio" id="dpe-field-C" name="dpe" [value]="DPEEnum.C" [disabled]="!selectable" [(ngModel)]="value"
+         (ngModelChange)="radioChanged($event)">
+  <label for="dpe-field-C">
+    <div class="arrow">
+      <span class="value">91 à 150</span>
+      <span class="note">{{ DPEEnum.C }}</span>
+    </div>
+    <div class="spacer"></div>
+    <div class="selected">
+      <span class="note">{{ DPEEnum.C }}</span>
+    </div>
+  </label>
+
+  <input type="radio" id="dpe-field-D" name="dpe" [value]="DPEEnum.D" [disabled]="!selectable" [(ngModel)]="value"
+         (ngModelChange)="radioChanged($event)">
+  <label for="dpe-field-D">
+    <div class="arrow">
+      <span class="value">151 à 230</span>
+      <span class="note">{{ DPEEnum.D }}</span>
+    </div>
+    <div class="spacer"></div>
+    <div class="selected">
+      <span class="note">{{ DPEEnum.D }}</span>
+    </div>
+  </label>
+
+  <input type="radio" id="dpe-field-E" name="dpe" [value]="DPEEnum.E" [disabled]="!selectable" [(ngModel)]="value"
+         (ngModelChange)="radioChanged($event)">
+  <label for="dpe-field-E">
+    <div class="arrow">
+      <span class="value">231 à 330</span>
+      <span class="note">{{ DPEEnum.E }}</span>
+    </div>
+    <div class="spacer"></div>
+    <div class="selected">
+      <span class="note">{{ DPEEnum.E }}</span>
+    </div>
+  </label>
+
+  <input type="radio" id="dpe-field-F" name="dpe" [value]="DPEEnum.F" [disabled]="!selectable" [(ngModel)]="value"
+         (ngModelChange)="radioChanged($event)">
+  <label for="dpe-field-F">
+    <div class="arrow">
+      <span class="value">331 à 450</span>
+      <span class="note">{{ DPEEnum.F }}</span>
+    </div>
+    <div class="spacer"></div>
+    <div class="selected">
+      <span class="note">{{ DPEEnum.F }}</span>
+    </div>
+  </label>
+
+  <input type="radio" id="dpe-field-G" name="dpe" [value]="DPEEnum.G" [disabled]="!selectable" [(ngModel)]="value"
+         (ngModelChange)="radioChanged($event)">
+  <label for="dpe-field-G">
+    <div class="arrow">
+      <span class="value">> 450</span>
+      <span class="note">{{ DPEEnum.G }}</span>
+    </div>
+    <div class="spacer"></div>
+    <div class="selected">
+      <span class="note">{{ DPEEnum.G }}</span>
+    </div>
+  </label>
+
+</div>
+
+<span class="scale-text">Logement énergivore</span>
+<p class="legend">Unité de mesure exprimée en kWh<sub>EP</sub>/m<sup>2</sup>.an</p>

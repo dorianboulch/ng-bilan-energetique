@@ -1,0 +1,209 @@
+$color-a: #008f35;
+$color-b: #57aa28;
+$color-c: #c5d400;
+$color-d: #fcea26;
+$color-e: #f8bb01;
+$color-f: #ea690b;
+$color-g: #e70a19;
+
+$color-selected: #000;
+$color-hover-selected: lighten($color-selected, 30);
+
+*{
+  box-sizing: border-box;
+}
+.scale {
+  display: flex;
+  flex-direction: column;
+
+  &.selectable {
+    label {
+      &:hover {
+        cursor: pointer;
+
+        & .spacer, & .selected {
+          display: block;
+        }
+
+        .spacer {
+          border-top-color: $color-hover-selected;
+        }
+
+        .selected {
+          background-color: $color-hover-selected;
+
+          &:after {
+            border-right-color: $color-hover-selected;
+          }
+        }
+      }
+    }
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .arrow {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 5px 5px;
+      margin-right: 25px;
+      transition: 0.15s;
+      height:38px;
+
+      &:after {
+        position: absolute;
+        left: 100%;
+        top: 0;
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 19px solid transparent;
+        border-bottom: 19px solid transparent;
+        border-left: 19px solid transparent;
+      }
+
+      .note {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+    }
+
+    .spacer {
+      display: none;
+      flex-grow: 1;
+      border-top: 1px dashed $color-selected;
+    }
+
+    .selected {
+      display: none;
+      margin-left: 25px;
+      padding: 5px 10px;
+      height: 38px;
+      background-color: $color-selected;
+      position: relative;
+
+      &:after {
+        position: absolute;
+        right: 100%;
+        top: 0;
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 19px solid transparent;
+        border-bottom: 19px solid transparent;
+        border-right: 19px solid $color-selected;
+      }
+
+      .note {
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #fff;
+      }
+    }
+
+    &[for="dpe-field-A"] {
+      .arrow {
+        width: 15%;
+        background-color: $color-a;
+
+        &:after {
+          border-left-color: $color-a;
+        }
+      }
+    }
+
+    &[for="dpe-field-B"] {
+      .arrow {
+        width: 25%;
+        background-color: $color-b;
+
+        &:after {
+          border-left-color: $color-b;
+        }
+      }
+    }
+
+    &[for="dpe-field-C"] {
+      .arrow {
+        width: 35%;
+        background-color: $color-c;
+
+        &:after {
+          border-left-color: $color-c;
+        }
+      }
+    }
+
+    &[for="dpe-field-D"] {
+      .arrow {
+        width: 45%;
+        background-color: $color-d;
+
+        &:after {
+          border-left-color: $color-d;
+        }
+      }
+    }
+
+    &[for="dpe-field-E"] {
+      .arrow {
+        width: 55%;
+        background-color: $color-e;
+
+        &:after {
+          border-left-color: $color-e;
+        }
+      }
+    }
+
+    &[for="dpe-field-F"] {
+      .arrow {
+        width: 65%;
+        background-color: $color-f;
+
+        &:after {
+          border-left-color: $color-f;
+        }
+      }
+    }
+
+    &[for="dpe-field-G"] {
+      .arrow {
+        width: 75%;
+        background-color: $color-g;
+
+        &:after {
+          border-left-color: $color-g;
+        }
+      }
+    }
+  }
+
+  input[type="radio"] {
+    display: none;
+
+    &:checked + label {
+      & .spacer, & .selected {
+        display: block;
+      }
+    }
+  }
+}
+
+.scale-text {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.legend {
+  font-style: italic;
+}
