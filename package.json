@@ -1,9 +1,13 @@
 {
   "name": "ng-bilan-energetique",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "peerDependencies": {
     "@angular/common": "^10.0.11",
     "@angular/core": "^10.0.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dorianboulch/ng-bilan-energetique.git"
   },
   "dependencies": {
     "tslib": "^2.0.0"
