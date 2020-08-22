@@ -1,0 +1,5 @@
+export enum MethodeDeCalculValues {
+  CALCUL_CONVENTIONNEL = 'CALCUL_CONVENTIONNEL',
+  FACTURES = 'FACTURES',
+  IMMEUBLE = 'IMMEUBLE',
+}
